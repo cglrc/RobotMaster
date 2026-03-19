@@ -79,6 +79,7 @@ float yaw=0;
 float target_angle[2] = {0, 0};
 uint8_t send_str2[sizeof(float) * 8];
 float target_speed[2]={0,0};
+float a=0;
 float yaw_increment=0;
 float pitch_increment=0;
 int16_t current[2]={0,0};
