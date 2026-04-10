@@ -2,6 +2,7 @@
 #include "can.h"
 #include "dma.h"
 #include "usart.h"
+#include "main.h"
 typedef struct
 {
 	struct
@@ -28,8 +29,9 @@ typedef struct
 		uint16_t v;
 	}key;
 }RC_Ctl_t;
-
+extern uint8_t receivedata[18];
+extern uint32_t rc_last_recv_time;
+extern uint8_t rc_disconnect_flag;
 extern RC_Ctl_t data; // ����Ϊ�ⲿ�������������ļ�ʹ��
 void remoteDataProcess(uint8_t* pData);
 
-void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef* huart, uint16_t Size);

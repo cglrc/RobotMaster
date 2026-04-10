@@ -69,6 +69,8 @@ virtualFolder:
         - path: ../user/core/BSP/Common/StateWatch/state_watch.cpp
         - path: ../user/core/HAL/CAN/impl/can_bus_impl.cpp
         - path: ../user/core/HAL/CAN/impl/can_device_impl.cpp
+        - path: ../user/core/BSP/RemoteControl/DT7.cpp
+        - path: ../user/core/BSP/RemoteControl/DT7.hpp
       folders: []
     - name: ALG
       files:
@@ -118,6 +120,7 @@ targets:
         - RTE/_yuantai
       libList: []
     excludeList: []
+    settings: {}
     toolchain: AC6
     toolchainConfigMap:
       AC6:
@@ -142,7 +145,7 @@ targets:
             warnings: no-warnings
           global:
             output-debug-info: enable
-            use-microLIB: false
+            use-microLIB: true
           linker:
             $outputTaskExcludes:
               - .bin

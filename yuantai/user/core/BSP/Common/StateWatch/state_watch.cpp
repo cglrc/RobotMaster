@@ -33,6 +33,13 @@ void BSP::WATCH_STATE::StateWatch::UpdateLastTime()
  */
 void BSP::WATCH_STATE::StateWatch::CheckStatus()
 {
+    /* 尚无一次 UpdateLastTime（未收到过数据）时不得判在线，否则 last_update==0 会与当前 tick 误判为「刚更新」 */
+    if (last_update_time_ == 0)
+    {
+        status_ = Status::OFFLINE;
+        return;
+    }
+
     // 处理计时器溢出情况
     if (update_time_ < last_update_time_)
     {

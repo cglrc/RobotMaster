@@ -1,21 +1,36 @@
 #include "../core/BSP/RemoteControl/yaokongqi.h"
 
-
 uint8_t receivedata[18];
 uint32_t rc_last_recv_time = 0;  // 遥控器最后接收时间（单位：ms）
 uint8_t rc_disconnect_flag = 0;  // 遥控器断联标志（0=正常，1=断联）
+ 
 
-void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef* huart, uint16_t Size)
-{
-	if (huart == &huart3)
-	{
-		rc_last_recv_time = HAL_GetTick();  // 更新最后接收时间（HAL_GetTick()返回系统运行ms数）
-    	rc_disconnect_flag = 0;  // 清除断联标志
-		remoteDataProcess(receivedata);
+ 
+//void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef* huart, uint16_t Size)
+//{
+    //if (huart == &huart3)
+   // {
+//        
+        // rc_last_recv_time = HAL_GetTick();
+        //rc_disconnect_flag = 0;
+        //remoteDataProcess(receivedata);
+        //HAL_UARTEx_ReceiveToIdle_DMA(&huart3,(uint8_t *)receivedata, 18);
+	//}	  
+//               
 		
-		HAL_UARTEx_ReceiveToIdle_DMA (&huart3 ,(uint8_t *)receivedata ,50);  
-	}
-}
+    
+//}
+//void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef* huart, uint16_t Size)
+//{
+//	if (huart == &huart3)
+//	{
+//		rc_last_recv_time = HAL_GetTick();  // 更新最后接收时间（HAL_GetTick()返回系统运行ms数）
+//    rc_disconnect_flag = 0;  // 清除断联标志
+//		remoteDataProcess(receivedata);
+//		
+//		HAL_UARTEx_ReceiveToIdle_DMA (&huart3 ,(uint8_t *)receivedata ,50);  
+//	}
+//}
 
 RC_Ctl_t data;//��yaokongqi.h�ļ�������extern RC_Ctl_t data����������һ��.c�ļ��ж��壨RC_Ctl_t data������ֻ�ܶ���һ�Σ���������һ���ļ��ٴζ���
 void remoteDataProcess(uint8_t* pData)
@@ -41,3 +56,4 @@ void remoteDataProcess(uint8_t* pData)
 
 	data.key.v = ((int16_t)pData[14]);
 }
+

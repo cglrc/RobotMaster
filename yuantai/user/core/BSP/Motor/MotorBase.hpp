@@ -60,6 +60,16 @@ namespace BSP::Motor
             }
         }
 
+        /** 每周期调用：根据最近一次 CAN 反馈时间与当前时间刷新在线状态，否则 getOfflineStatus 恒为离线。 */
+        void refreshConnectionStatus()
+        {
+            for (uint8_t i = 0; i < N; i++)
+            {
+                state_watch_[i].UpdateTime();
+                state_watch_[i].CheckStatus();
+            }
+        }
+
         /**
          * @brief 
          * 

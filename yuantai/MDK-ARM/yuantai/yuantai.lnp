@@ -34,6 +34,7 @@
 "yuantai\state_watch.o"
 "yuantai\can_bus_impl.o"
 "yuantai\can_device_impl.o"
+"yuantai\dt7.o"
 "yuantai\pid.o"
 "yuantai\croutine.o"
 "yuantai\event_groups.o"
@@ -45,7 +46,7 @@
 "yuantai\cmsis_os.o"
 "yuantai\heap_4.o"
 "yuantai\port.o"
---strict --scatter "yuantai\yuantai.sct"
+--library_type=microlib --strict --scatter "yuantai\yuantai.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "yuantai.map" -o yuantai\yuantai.axf

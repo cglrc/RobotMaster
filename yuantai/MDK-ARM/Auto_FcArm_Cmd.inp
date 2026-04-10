@@ -1,5 +1,6 @@
 ..\user\core\BSP\IMU\HI12_imu.hpp,
 ..\user\core\BSP\IMU\HI12Base.hpp,
 ..\user\core\BSP\Motor\MotorBase.hpp,
+..\user\core\BSP\RemoteControl\DT7.hpp,
 ..\user\core\Alg\PID\pid.hpp 
 TO yuantai.hex RTE NOPRINT
