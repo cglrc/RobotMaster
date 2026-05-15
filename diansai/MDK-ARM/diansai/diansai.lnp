@@ -3,8 +3,10 @@
 "diansai\main.o"
 "diansai\gpio.o"
 "diansai\freertos.o"
+"diansai\dma.o"
 "diansai\i2c.o"
 "diansai\tim.o"
+"diansai\usart.o"
 "diansai\stm32f1xx_it.o"
 "diansai\stm32f1xx_hal_msp.o"
 "diansai\stm32f1xx_hal_timebase_tim.o"
@@ -22,6 +24,7 @@
 "diansai\stm32f1xx_hal_flash_ex.o"
 "diansai\stm32f1xx_hal_exti.o"
 "diansai\stm32f1xx_hal_i2c.o"
+"diansai\stm32f1xx_hal_uart.o"
 "diansai\system_stm32f1xx.o"
 "diansai\bsp_motor.o"
 "diansai\bsp_encoder.o"
@@ -38,6 +41,7 @@
 "diansai\heap_4.o"
 "diansai\port.o"
 "diansai\linewalking.o"
+"diansai\blue.o"
 --strict --scatter "diansai\diansai.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

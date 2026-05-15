@@ -23,7 +23,7 @@ void Buzzer_SetState(BuzzerState_t state)
 void Buzzer_ShortBeep(void)
 {
     g_buzzerMode = BUZZER_MODE_SHORT;
-    g_buzzerDuration = 30;
+    g_buzzerDuration = 20;
     g_buzzerStartTime = HAL_GetTick();
     Buzzer_SetState(BUZZER_ON);
 }
@@ -73,7 +73,7 @@ void StartBuzzerTask(void *argument)
         
         if(g_buzzer_stop_trigger)
         {
-            Buzzer_LongBeep(1500);
+            Buzzer_LongBeep(1000);
             g_buzzer_stop_trigger = 0;
         }
         

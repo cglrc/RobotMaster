@@ -14,39 +14,45 @@ static uint8_t junction_counter = 0;
 #define JUNCTION_THRESHOLD 2
 
 // 系统运行状态
-static SystemState_t g_systemState = SYS_STOPPED;
+SystemState_t g_systemState = SYS_STOPPED;
 // 启动按钮防抖变量
 static uint8_t button_last_state = BUTTON_RELEASED;
 static uint8_t button_stable_state = BUTTON_RELEASED;
 static uint8_t button_debounce_counter = 0;
 #define BUTTON_DEBOUNCE_DELAY 5
-// 分支计数全局变量
+
+// 分支计数变量
 volatile int left_branch_count = 0;
 volatile int right_branch_count = 0;
-
-// 分支防抖相关变量
+// 分支防抖变量
 static uint8_t left_branch_counter = 0;
 static uint8_t right_branch_counter = 0;
 #define BRANCH_THRESHOLD 2
 static uint8_t left_branch_detected = 0;
 static uint8_t right_branch_detected = 0;
 // 十字计数全局变量
-volatile int crossroad_count =-1;
-
-//所有分支总和
-volatile int all = 0;
+volatile int crossroad_count = 0;
 // 十字路口防抖计数器
 static uint8_t crossroad_counter = 0;
 #define CROSSROAD_THRESHOLD 2
 // 十字路口检测标志（防止重复计数）
 static uint8_t crossroad_detected_flag = 0;
+//所有分支总和
+volatile int all = 0;
 
 // 计时变量
-static uint32_t button_press_time = 0;
+uint32_t button_press_time = 0;
 volatile uint32_t debug_counter = 0;
+
+// 盲跑相关变量
+volatile uint8_t g_startup_blind_run = 0;
+volatile uint32_t g_blind_run_start_time = 0;
+// 终点到达标志
+ uint8_t g_reached_end = 0;
 
 // 停止蜂鸣器标志
 static uint8_t stop_beep_flag = 0;
+
 /**
  * @brief 初始化巡线任务
  */
@@ -84,10 +90,30 @@ void GetLineWalking(LineWalking_State_t *pState)
  */
 MotionMode_t ProcessLineWalking(LineWalking_State_t *pState)
 {
-		if(pState == NULL) return MOVE_STOP;
-    if (g_systemState == SYS_STOPPED) return MOVE_STOP;
-    
-    if(pState == NULL) return MOVE_STOP;
+		if(pState == NULL) return MOVE_ENDSTOP;
+   
+		// 系统停止或已到达终点，不执行任何动作
+		if (g_systemState == SYS_STOPPED || g_reached_end) return MOVE_ENDSTOP;
+		
+    // 盲跑模式处理
+    if (g_startup_blind_run)
+    {
+        uint32_t current_time = HAL_GetTick();
+        if (current_time - g_blind_run_start_time < BLIND_RUN_DURATION_MS)
+        {
+            return MOVE_FORWARD;  // 盲跑期间直行
+        }
+        else
+        {
+            g_startup_blind_run = 0;  // 盲跑结束
+        }
+    }
+//		if(pState->branch_left == HIGH && pState->L2 == HIGH && 
+//       pState->R1 == HIGH && pState->branch_right == HIGH)
+//    {
+//			g_reached_end = 1;  // 检测到终点，设置标志
+//			return MOVE_ENDSTOP;
+//		}
     // 检测十字路口
     if(pState->branch_left == LOW && pState->L2 == LOW && 
        pState->R1 == LOW && pState->branch_right == LOW)
@@ -95,11 +121,31 @@ MotionMode_t ProcessLineWalking(LineWalking_State_t *pState)
         crossroad_counter++;
         if(crossroad_counter >= CROSSROAD_THRESHOLD && !crossroad_detected_flag)
         {
-            crossroad_count++;                    // 计数+1
-            crossroad_detected_flag = 1;          // 防止重复计数
+					// 延时等待通过路口，检测是否为终点
+					crossroad_detected_flag = 1;          // 防止重复计数
+        osDelay(50);  // 等待小车通过路口
+        
+        // 重新读取传感器状态
+        LineWalking_State_t tempState;
+        GetLineWalking(&tempState);
+        
+        // 如果四个传感器都是HIGH（全白），说明后面没线了，是终点
+        if(tempState.branch_left == HIGH && tempState.L2 == HIGH && 
+           tempState.R1 == HIGH && tempState.branch_right == HIGH)
+        {
+            g_reached_end = 1;  // 检测到终点
+            return MOVE_ENDSTOP;
+        }
+        else
+        {
+            // 后面还有线，是十字路口
+            crossroad_count++;
+            g_buzzer_crossroad_trigger = 1;  // 蜂鸣器短叫
             crossroad_counter = 0;
-            g_buzzer_crossroad_trigger = 1;       // 触发蜂鸣器短叫
-            return MOVE_CROSSROAD;
+            return MOVE_FORWARD;
+        }
+					
+        
         }
     }
 		
@@ -163,15 +209,16 @@ MotionMode_t ProcessLineWalking(LineWalking_State_t *pState)
         pState->junction_detected = 0;
     }
     
-    // 中间左侧检测到黑线，需要左转修正
+    // 中间右侧检测到黑线，需要右转修正
     if(pState->L2 == LOW && pState->R1 == HIGH)
     {   
-        return MOVE_LEFT_TURN;
+				return MOVE_RIGHT_TURN;
+        
     }
-    // 中间右侧检测到黑线，需要右转修正
+    // 中间右侧检测到黑线，需要左转修正
     else if(pState->L2 == HIGH && pState->R1 == LOW)
     {   
-        return MOVE_RIGHT_TURN;
+        return MOVE_LEFT_TURN;
     }
     // 都在黑线上，加速前进
     else if(pState->L2 == LOW && pState->R1 == LOW)
@@ -188,12 +235,21 @@ MotionMode_t ProcessLineWalking(LineWalking_State_t *pState)
  */
 void ExecuteMotion(MotionMode_t mode)
 {
+	
+		if (g_systemState == SYS_STOPPED)
+    {
+        Motor_Set_Pwm(MOTOR_ID_M1, 0);
+        Motor_Set_Pwm(MOTOR_ID_M2, 0);
+        Motor_Set_Pwm(MOTOR_ID_M3, 0);
+        Motor_Set_Pwm(MOTOR_ID_M4, 0);
+        return;
+    }
     switch(mode)
     {
         case MOVE_FORWARD:
-            Motor_Set_Pwm(MOTOR_ID_M1, V_MAX * 0.995);
+            Motor_Set_Pwm(MOTOR_ID_M1, V_MAX);
             Motor_Set_Pwm(MOTOR_ID_M2, V_MAX);
-            Motor_Set_Pwm(MOTOR_ID_M3, V_MAX * 0.995);
+            Motor_Set_Pwm(MOTOR_ID_M3, V_MAX);
             Motor_Set_Pwm(MOTOR_ID_M4, V_MAX);
             stop_beep_flag = 0;  // 重新开始运动时清除标志
             break;
@@ -201,20 +257,28 @@ void ExecuteMotion(MotionMode_t mode)
         case MOVE_LEFT_TURN:
             Motor_Set_Pwm(MOTOR_ID_M1, V_MAX); //左转微调
             Motor_Set_Pwm(MOTOR_ID_M2, V_MIN);
-            Motor_Set_Pwm(MOTOR_ID_M3, V_MAX);
-            Motor_Set_Pwm(MOTOR_ID_M4, V_MIN);
+            Motor_Set_Pwm(MOTOR_ID_M3, V_MIN);
+            Motor_Set_Pwm(MOTOR_ID_M4, V_MAX);
             stop_beep_flag = 0;
             break;
             
         case MOVE_RIGHT_TURN:
             Motor_Set_Pwm(MOTOR_ID_M1, V_MIN); //右转微调
             Motor_Set_Pwm(MOTOR_ID_M2, V_MAX);
-            Motor_Set_Pwm(MOTOR_ID_M3, V_MIN);
-            Motor_Set_Pwm(MOTOR_ID_M4, V_MAX);
+            Motor_Set_Pwm(MOTOR_ID_M3, V_MAX);
+            Motor_Set_Pwm(MOTOR_ID_M4, V_MIN);
             stop_beep_flag = 0;
             break;
-            
-        case MOVE_STOP:
+			
+				case MOVE_STOP:
+						g_systemState = SYS_STOPPED;
+						Motor_Set_Pwm(MOTOR_ID_M1, 0);
+            Motor_Set_Pwm(MOTOR_ID_M2, 0);
+            Motor_Set_Pwm(MOTOR_ID_M3, 0);
+            Motor_Set_Pwm(MOTOR_ID_M4, 0);
+						break;
+				
+        case MOVE_ENDSTOP:
         default:
             Motor_Set_Pwm(MOTOR_ID_M1, 0);
             Motor_Set_Pwm(MOTOR_ID_M2, 0);
@@ -226,6 +290,8 @@ void ExecuteMotion(MotionMode_t mode)
             {
                 g_buzzer_stop_trigger = 1;
                 stop_beep_flag = 1;
+							  g_reached_end = 1;  // 设置终点标志
+								g_systemState = SYS_STOPPED;  // 锁定时间
             }
             break;
     
@@ -255,7 +321,7 @@ void ResetAllState(void)
 {
     left_branch_count = 0;
     right_branch_count = 0;
-    crossroad_count = -1;
+    crossroad_count = 0;
     all = 0;
     left_branch_counter = 0;
     right_branch_counter = 0;
@@ -314,6 +380,10 @@ static void HandleStartButton(void)
             ResetAllState();
             g_systemState = SYS_RUNNING;
             button_press_time = HAL_GetTick();
+					
+						g_startup_blind_run = 1;
+            g_blind_run_start_time = HAL_GetTick();
+            g_reached_end = 0;
         }
         else
         {
@@ -343,7 +413,7 @@ void StartLineWalkingTask(void *argument)
     LineWalking_State_t localState;
     MotionMode_t currentMode;
     TickType_t lastWakeTime = xTaskGetTickCount();
-    const TickType_t taskPeriod = pdMS_TO_TICKS(5);  
+    const TickType_t taskPeriod = pdMS_TO_TICKS(4);  
     
     for(;;)
     {

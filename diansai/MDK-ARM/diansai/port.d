@@ -1,7 +1,7 @@
 diansai\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c
 diansai\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-diansai\port.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stddef.h
-diansai\port.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\port.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\port.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 diansai\port.o: ../Core/Inc/FreeRTOSConfig.h
 diansai\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 diansai\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

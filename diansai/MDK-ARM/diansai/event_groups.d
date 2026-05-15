@@ -1,8 +1,8 @@
 diansai\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
-diansai\event_groups.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdlib.h
+diansai\event_groups.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
 diansai\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-diansai\event_groups.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stddef.h
-diansai\event_groups.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\event_groups.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\event_groups.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 diansai\event_groups.o: ../Core/Inc/FreeRTOSConfig.h
 diansai\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 diansai\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

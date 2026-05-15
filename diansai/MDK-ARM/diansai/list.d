@@ -1,8 +1,8 @@
 diansai\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
-diansai\list.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdlib.h
+diansai\list.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
 diansai\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-diansai\list.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stddef.h
-diansai\list.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\list.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\list.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 diansai\list.o: ../Core/Inc/FreeRTOSConfig.h
 diansai\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 diansai\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

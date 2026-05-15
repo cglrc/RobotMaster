@@ -1,9 +1,9 @@
 diansai\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c
-diansai\tasks.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdlib.h
-diansai\tasks.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\string.h
+diansai\tasks.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+diansai\tasks.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
 diansai\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-diansai\tasks.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stddef.h
-diansai\tasks.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\tasks.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\tasks.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 diansai\tasks.o: ../Core/Inc/FreeRTOSConfig.h
 diansai\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 diansai\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

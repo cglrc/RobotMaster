@@ -29,6 +29,7 @@
 #include "linewalking.h"
 #include "LiquidCrystal_I2C.h"
 #include "buzzer.h"
+#include "blue.h"
 #include <stdio.h>
 /* USER CODE END Includes */
 
@@ -99,6 +100,7 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
   LineWalking_Task_Init();
   Buzzer_Task_Init();
+  BLUE_Init();
   /* USER CODE END Init */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -164,6 +166,8 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
+    BLUE_Process();
+    
     //LCD_SetCursor(&lcd, 0, 0);
 		//LCD_Print(&lcd, "                ");
     // ��һ�У�+:ten l:left r:right
@@ -231,4 +235,3 @@ Encoder_Update_Count();
 /* USER CODE BEGIN Application */
 
 /* USER CODE END Application */
-

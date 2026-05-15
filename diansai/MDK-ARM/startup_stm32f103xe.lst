@@ -556,11 +556,10 @@ ARM Macro Assembler    Page 9
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=diansai\startup_stm32f103xe.d -odiansai\startup_stm32f103xe.o -I..
-/Drivers/CMSIS/Include -I.\RTE\_diansai -ID:\keil5\Pack\ARM\CMSIS\5.9.0\CMSIS\C
-ore\Include -ID:\keil5\Pack\Keil\STM32F1xx_DFP\2.4.0\Device\Include --predefine
-="__UVISION_VERSION SETA 537" --predefine="_RTE_ SETA 1" --predefine="STM32F10X
-_HD SETA 1" --predefine="_RTE_ SETA 1" --list=startup_stm32f103xe.lst startup_s
-tm32f103xe.s
+/Drivers/CMSIS/Include -I.\RTE\_diansai -ID:\keil5\ARM\CMSIS\6.1.0\CMSIS\Core\I
+nclude -ID:\keil5\Keil\STM32F1xx_DFP\2.4.1\Device\Include --predefine="__UVISIO
+N_VERSION SETA 540" --predefine="STM32F10X_HD SETA 1" --predefine="_RTE_ SETA 1
+" --list=startup_stm32f103xe.lst startup_stm32f103xe.s
 
 
 

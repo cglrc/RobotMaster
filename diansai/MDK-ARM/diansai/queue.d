@@ -1,9 +1,9 @@
 diansai\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
-diansai\queue.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdlib.h
-diansai\queue.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\string.h
+diansai\queue.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+diansai\queue.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
 diansai\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-diansai\queue.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stddef.h
-diansai\queue.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\queue.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\queue.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 diansai\queue.o: ../Core/Inc/FreeRTOSConfig.h
 diansai\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 diansai\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

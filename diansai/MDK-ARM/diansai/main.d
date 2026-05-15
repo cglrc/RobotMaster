@@ -7,14 +7,14 @@ diansai\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 diansai\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 diansai\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h
 diansai\main.o: ../Drivers/CMSIS/Include/core_cm3.h
-diansai\main.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 diansai\main.o: ../Drivers/CMSIS/Include/cmsis_version.h
 diansai\main.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 diansai\main.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 diansai\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 diansai\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 diansai\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-diansai\main.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 diansai\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 diansai\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 diansai\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -28,6 +28,7 @@ diansai\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
 diansai\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 diansai\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 diansai\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+diansai\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 diansai\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 diansai\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 diansai\main.o: ../Core/Inc/FreeRTOSConfig.h
@@ -39,8 +40,11 @@ diansai\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.
 diansai\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 diansai\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 diansai\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+diansai\main.o: ../Core/Inc/dma.h
 diansai\main.o: ../Core/Inc/i2c.h
 diansai\main.o: ../Core/Inc/tim.h
+diansai\main.o: ../Core/Inc/usart.h
 diansai\main.o: ../Core/Inc/gpio.h
 diansai\main.o: ../BSP/bsp_motor.h
 diansai\main.o: ../BSP/bsp_encoder.h
+diansai\main.o: ../TASK/blue.h

@@ -8,14 +8,14 @@ diansai\buzzer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 diansai\buzzer.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 diansai\buzzer.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h
 diansai\buzzer.o: ../Drivers/CMSIS/Include/core_cm3.h
-diansai\buzzer.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\buzzer.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 diansai\buzzer.o: ../Drivers/CMSIS/Include/cmsis_version.h
 diansai\buzzer.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 diansai\buzzer.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 diansai\buzzer.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 diansai\buzzer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 diansai\buzzer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-diansai\buzzer.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\buzzer.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 diansai\buzzer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 diansai\buzzer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 diansai\buzzer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -29,6 +29,7 @@ diansai\buzzer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
 diansai\buzzer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 diansai\buzzer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 diansai\buzzer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+diansai\buzzer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 diansai\buzzer.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 diansai\buzzer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 diansai\buzzer.o: ../Core/Inc/FreeRTOSConfig.h

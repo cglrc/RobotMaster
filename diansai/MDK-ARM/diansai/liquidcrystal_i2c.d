@@ -1,7 +1,7 @@
 diansai\liquidcrystal_i2c.o: ..\BSP\LiquidCrystal_I2C.cpp
 diansai\liquidcrystal_i2c.o: ..\BSP\LiquidCrystal_I2C.h
-diansai\liquidcrystal_i2c.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
-diansai\liquidcrystal_i2c.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\string.h
+diansai\liquidcrystal_i2c.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\liquidcrystal_i2c.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
 diansai\liquidcrystal_i2c.o: ../Core/Inc/i2c.h
 diansai\liquidcrystal_i2c.o: ../Core/Inc/main.h
 diansai\liquidcrystal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
@@ -17,7 +17,7 @@ diansai\liquidcrystal_i2c.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 diansai\liquidcrystal_i2c.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 diansai\liquidcrystal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 diansai\liquidcrystal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-diansai\liquidcrystal_i2c.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\liquidcrystal_i2c.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 diansai\liquidcrystal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 diansai\liquidcrystal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 diansai\liquidcrystal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -31,3 +31,4 @@ diansai\liquidcrystal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i
 diansai\liquidcrystal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 diansai\liquidcrystal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 diansai\liquidcrystal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+diansai\liquidcrystal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h

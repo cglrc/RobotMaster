@@ -51,6 +51,7 @@ typedef enum {
     MOVE_LEFT_TURN,
     MOVE_RIGHT_TURN,
     MOVE_STOP,
+		MOVE_ENDSTOP,
 		MOVE_CROSSROAD
 } MotionMode_t;
 // 系统运行状态
@@ -89,6 +90,10 @@ extern volatile int crossroad_count;
 extern volatile int all;
 extern volatile uint32_t debug_counter;
 
+// 系统状态和按钮时间（供蓝牙模块使用）
+extern SystemState_t g_systemState;
+extern uint32_t button_press_time;
+
 void Buzzer_ShortBeep(void);
 void Buzzer_LongBeep(uint32_t duration_ms);
 
@@ -97,5 +102,9 @@ extern volatile uint8_t g_buzzer_left_branch_trigger;
 extern volatile uint8_t g_buzzer_right_branch_trigger;
 extern volatile uint8_t g_buzzer_crossroad_trigger;
 extern volatile uint8_t g_buzzer_stop_trigger;
+extern uint8_t g_reached_end ;
 
+extern volatile uint8_t g_startup_blind_run;
+extern volatile uint32_t g_blind_run_start_time;
+#define BLIND_RUN_DURATION_MS 100  // 盲跑持续时间
 #endif

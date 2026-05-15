@@ -2,7 +2,7 @@ diansai\system_stm32f1xx.o: ../Core/Src/system_stm32f1xx.c
 diansai\system_stm32f1xx.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 diansai\system_stm32f1xx.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h
 diansai\system_stm32f1xx.o: ../Drivers/CMSIS/Include/core_cm3.h
-diansai\system_stm32f1xx.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\system_stm32f1xx.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 diansai\system_stm32f1xx.o: ../Drivers/CMSIS/Include/cmsis_version.h
 diansai\system_stm32f1xx.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 diansai\system_stm32f1xx.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -13,7 +13,7 @@ diansai\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rc
 diansai\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 diansai\system_stm32f1xx.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 diansai\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-diansai\system_stm32f1xx.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\system_stm32f1xx.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 diansai\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 diansai\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 diansai\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -27,3 +27,4 @@ diansai\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2
 diansai\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 diansai\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 diansai\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+diansai\system_stm32f1xx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h

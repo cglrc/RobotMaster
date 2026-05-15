@@ -1,8 +1,8 @@
 diansai\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
-diansai\stream_buffer.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
-diansai\stream_buffer.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\string.h
+diansai\stream_buffer.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\stream_buffer.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
 diansai\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-diansai\stream_buffer.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\stream_buffer.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 diansai\stream_buffer.o: ../Core/Inc/FreeRTOSConfig.h
 diansai\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 diansai\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

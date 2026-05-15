@@ -1,7 +1,7 @@
 diansai\freertos.o: ../Core/Src/freertos.c
 diansai\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-diansai\freertos.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stddef.h
-diansai\freertos.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\freertos.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\freertos.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 diansai\freertos.o: ../Core/Inc/FreeRTOSConfig.h
 diansai\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 diansai\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
@@ -37,6 +37,7 @@ diansai\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
 diansai\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 diansai\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 diansai\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+diansai\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 diansai\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 diansai\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 diansai\freertos.o: ../BSP/bsp_motor.h
@@ -45,4 +46,5 @@ diansai\freertos.o: ../TASK/linewalking.h
 diansai\freertos.o: ../Core/Inc/gpio.h
 diansai\freertos.o: ../BSP/LiquidCrystal_I2C.h
 diansai\freertos.o: ../BSP/buzzer.h
-diansai\freertos.o: D:\keil5\Core\ARM\ARMCC\Bin\..\include\stdio.h
+diansai\freertos.o: ../TASK/blue.h
+diansai\freertos.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
