@@ -1,0 +1,12 @@
+id: six
+name: '6'
+version: 1.0.0
+author: qq
+icon: app.png
+desc: qq
+files:
+  - ball_position.py
+  - main.py
+  - model_312644_npu.axmodel
+  - model_312644_vnpu.axmodel
+  - model_312644.mud

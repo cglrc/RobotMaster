@@ -1,0 +1,15 @@
+id: three
+name: '3'
+version: 1.0.1
+author: '3'
+icon: app.png
+desc: '1'
+files:
+  - app.png
+  - app.yaml
+  - ball_position.py
+  - main.py
+  - model_312644_npu.axmodel
+  - model_312644_vnpu.axmodel
+  - model_312644.mud
+  - report.json
