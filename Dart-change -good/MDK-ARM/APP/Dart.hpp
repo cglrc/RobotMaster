@@ -25,8 +25,8 @@ public:
     static const int DEAD = 200;
 
     enum Speed {
-        LOAD_UP   =  1500,
-        LOAD_DOWN = -4000,
+        LOAD_UP   =  2700,
+        LOAD_DOWN = -6000,
         SPRING_UP =  500,
         SPRING_DN = -500,
         STOP      =  0

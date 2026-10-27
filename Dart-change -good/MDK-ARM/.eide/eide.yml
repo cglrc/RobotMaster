@@ -130,26 +130,26 @@ virtualFolder:
       folders:
         - name: Task
           files:
-            - path: APP_Task/Dart.cpp
-            - path: APP_Task/Dart.hpp
-            - path: APP_Task/MotorControl.cpp
-            - path: APP_Task/MotorControl.hpp
-            - path: APP_Task/UartSend.cpp
-            - path: APP_Task/UartSend.hpp
-            - path: APP_Task/VisionCommunication.cpp
-            - path: APP_Task/VisionCommunication.hpp
-            - path: APP_Task/SystemMonitor.cpp
-            - path: APP_Task/SystemMonitor.hpp
-            - path: APP_Task/Buzzer.cpp
-            - path: APP_Task/Buzzer.hpp
-            - path: APP_Task/HX711.cpp
-            - path: APP_Task/HX711.hpp
-            - path: APP_Task/AutoLaunch.cpp
-            - path: APP_Task/AutoLaunch.hpp
-            - path: APP_Task/MotorOfflineDetector.cpp
-            - path: APP_Task/MotorOfflineDetector.hpp
-            - path: APP_Task/ServoControl.cpp
-            - path: APP_Task/ServoControl.hpp
+            - path: APP/Dart.cpp
+            - path: APP/Dart.hpp
+            - path: APP/MotorControl.cpp
+            - path: APP/MotorControl.hpp
+            - path: APP/UartSend.cpp
+            - path: APP/UartSend.hpp
+            - path: APP/VisionCommunication.cpp
+            - path: APP/VisionCommunication.hpp
+            - path: APP/SystemMonitor.cpp
+            - path: APP/SystemMonitor.hpp
+            - path: APP/Buzzer.cpp
+            - path: APP/Buzzer.hpp
+            - path: APP/HX711.cpp
+            - path: APP/HX711.hpp
+            - path: APP/AutoLaunch.cpp
+            - path: APP/AutoLaunch.hpp
+            - path: APP/MotorOfflineDetector.cpp
+            - path: APP/MotorOfflineDetector.hpp
+            - path: APP/ServoControl.cpp
+            - path: APP/ServoControl.hpp
           folders: []
     - name: ::CMSIS
       files: []
@@ -174,7 +174,7 @@ targets:
         - ../Drivers/CMSIS/Device/ST/STM32F4xx/Include
         - ../Drivers/CMSIS/Include
         - ../Middlewares/ST/ARM/DSP/Inc
-        - APP_Task
+        - APP
         - BSP_Can_Communication
         - BSP_Uart_Communication
         - Middle_Plugin
@@ -319,7 +319,7 @@ targets:
         - ../Drivers/CMSIS/Device/ST/STM32F4xx/Include
         - ../Drivers/CMSIS/Include
         - ../Middlewares/ST/ARM/DSP/Inc
-        - APP_Task
+        - APP
         - BSP_Can_Communication
         - BSP_Uart_Communication
         - Middle_Plugin
@@ -441,3 +441,4 @@ targets:
         proType: 1
         speed: 8000
     uploader: JLink
+

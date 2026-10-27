@@ -115,7 +115,7 @@ void hard_fault_handler_c(uint32_t *stack)
   volatile uint32_t r3  = stack[3];
   volatile uint32_t r12 = stack[4];
   volatile uint32_t lr  = stack[5];
-  volatile uint32_t pc  = stack[6];   // ← 触发故障的指令地址
+  volatile uint32_t pc  = stack[6];
   volatile uint32_t psr = stack[7];
 
   volatile uint32_t cfsr  = SCB->CFSR;

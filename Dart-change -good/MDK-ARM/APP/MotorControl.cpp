@@ -42,12 +42,12 @@ static void MotorInit()
     Motors[LEFT_LIFT].SpeedPID.setMax(16000.0f);
     Motors[LEFT_LIFT].SpeedPID.setIntegralLimit(10000.0f);
 
-    Motors[RIGHT_LOAD].SpeedPID.setK(17.0f, 0.1f, 0.0f);
+    Motors[RIGHT_LOAD].SpeedPID.setK(12.0f, 0.1f, 0.0f);
     Motors[RIGHT_LOAD].SpeedPID.setMax(16000.0f);
     Motors[RIGHT_LOAD].SpeedPID.setIntegralLimit(30000.0f);
     Motors[RIGHT_LOAD].Filter.setParams(380.0f, 0.001f);
 
-    Motors[LEFT_LOAD].SpeedPID.setK(17.0f, 0.1f, 0.0f);
+    Motors[LEFT_LOAD].SpeedPID.setK(12.0f, 0.1f, 0.0f);
     Motors[LEFT_LOAD].SpeedPID.setMax(16000.0f);
     Motors[LEFT_LOAD].SpeedPID.setIntegralLimit(30000.0f);
     Motors[LEFT_LOAD].Filter.setParams(380.0f, 0.001f);

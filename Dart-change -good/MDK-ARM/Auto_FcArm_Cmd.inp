@@ -1,5 +1,5 @@
-APP_Task\VisionCommunication.hpp,
-APP_Task\auto.hpp,
+APP\VisionCommunication.hpp,
+APP\auto.hpp,
 ..\user\core\BSP\RemoteControl\DT7.hpp,
 ..\user\core\BSP\Common\StateWatch\state_watch.hpp,
 ..\user\core\BSP\Common\StateWatch\buzzer_manager.hpp 

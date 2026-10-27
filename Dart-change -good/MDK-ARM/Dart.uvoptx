@@ -120,7 +120,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
-          <Name></Name>
+          <Name>?</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -178,40 +178,25 @@
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Dart.Yaw_Angle,0x0A</ItemText>
+          <ItemText>SpeedPID_AngleSensorM3508.Current</ItemText>
         </Ww>
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
-          <ItemText>SpeedPID_AngleSensorM3508.Current</ItemText>
+          <ItemText>DT7UartCom.rc.ch4,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>6</count>
           <WinNumber>1</WinNumber>
-          <ItemText>DT7UartCom.rc.ch4,0x0A</ItemText>
+          <ItemText>DT7UartCom.rc.s1,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>7</count>
           <WinNumber>1</WinNumber>
-          <ItemText>DT7UartCom.rc.s1,0x0A</ItemText>
-        </Ww>
-        <Ww>
-          <count>8</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>DT7CtrlMode,0x0A</ItemText>
-        </Ww>
-        <Ww>
-          <count>9</count>
-          <WinNumber>1</WinNumber>
           <ItemText>DT7UartCom.rc.s2,0x0A</ItemText>
         </Ww>
         <Ww>
-          <count>10</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>DT7_ReceiveArr,0x0A</ItemText>
-        </Ww>
-        <Ww>
-          <count>11</count>
+          <count>8</count>
           <WinNumber>1</WinNumber>
           <ItemText>pc</ItemText>
         </Ww>
@@ -1133,7 +1118,7 @@
   </Group>
 
   <Group>
-    <GroupName>APP/Task</GroupName>
+    <GroupName>APP</GroupName>
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -1145,7 +1130,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\Dart.cpp</PathWithFileName>
+      <PathWithFileName>.\APP\Dart.cpp</PathWithFileName>
       <FilenameWithoutPath>Dart.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1157,7 +1142,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\Dart.hpp</PathWithFileName>
+      <PathWithFileName>.\APP\Dart.hpp</PathWithFileName>
       <FilenameWithoutPath>Dart.hpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1169,7 +1154,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\MotorControl.cpp</PathWithFileName>
+      <PathWithFileName>.\APP\MotorControl.cpp</PathWithFileName>
       <FilenameWithoutPath>MotorControl.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1181,7 +1166,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\MotorControl.hpp</PathWithFileName>
+      <PathWithFileName>.\APP\MotorControl.hpp</PathWithFileName>
       <FilenameWithoutPath>MotorControl.hpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1193,7 +1178,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\UartSend.cpp</PathWithFileName>
+      <PathWithFileName>.\APP\UartSend.cpp</PathWithFileName>
       <FilenameWithoutPath>UartSend.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1205,7 +1190,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\UartSend.hpp</PathWithFileName>
+      <PathWithFileName>.\APP\UartSend.hpp</PathWithFileName>
       <FilenameWithoutPath>UartSend.hpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1217,7 +1202,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\SystemMonitor.cpp</PathWithFileName>
+      <PathWithFileName>.\APP\SystemMonitor.cpp</PathWithFileName>
       <FilenameWithoutPath>SystemMonitor.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1229,7 +1214,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\SystemMonitor.hpp</PathWithFileName>
+      <PathWithFileName>.\APP\SystemMonitor.hpp</PathWithFileName>
       <FilenameWithoutPath>SystemMonitor.hpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1241,7 +1226,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\Buzzer.cpp</PathWithFileName>
+      <PathWithFileName>.\APP\Buzzer.cpp</PathWithFileName>
       <FilenameWithoutPath>Buzzer.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1253,7 +1238,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\Buzzer.hpp</PathWithFileName>
+      <PathWithFileName>.\APP\Buzzer.hpp</PathWithFileName>
       <FilenameWithoutPath>Buzzer.hpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1265,7 +1250,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\MotorOfflineDetector.cpp</PathWithFileName>
+      <PathWithFileName>.\APP\MotorOfflineDetector.cpp</PathWithFileName>
       <FilenameWithoutPath>MotorOfflineDetector.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1277,7 +1262,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\MotorOfflineDetector.hpp</PathWithFileName>
+      <PathWithFileName>.\APP\MotorOfflineDetector.hpp</PathWithFileName>
       <FilenameWithoutPath>MotorOfflineDetector.hpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1289,7 +1274,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\ServoControl.cpp</PathWithFileName>
+      <PathWithFileName>.\APP\ServoControl.cpp</PathWithFileName>
       <FilenameWithoutPath>ServoControl.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1301,7 +1286,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\ServoControl.hpp</PathWithFileName>
+      <PathWithFileName>.\APP\ServoControl.hpp</PathWithFileName>
       <FilenameWithoutPath>ServoControl.hpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1313,7 +1298,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\VisionCommunication.cpp</PathWithFileName>
+      <PathWithFileName>.\APP\VisionCommunication.cpp</PathWithFileName>
       <FilenameWithoutPath>VisionCommunication.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1325,7 +1310,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\VisionCommunication.hpp</PathWithFileName>
+      <PathWithFileName>.\APP\VisionCommunication.hpp</PathWithFileName>
       <FilenameWithoutPath>VisionCommunication.hpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1337,7 +1322,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\auto.cpp</PathWithFileName>
+      <PathWithFileName>.\APP\auto.cpp</PathWithFileName>
       <FilenameWithoutPath>auto.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1349,7 +1334,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\auto.hpp</PathWithFileName>
+      <PathWithFileName>.\APP\auto.hpp</PathWithFileName>
       <FilenameWithoutPath>auto.hpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1361,7 +1346,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\APP_Task\HX711.cpp</PathWithFileName>
+      <PathWithFileName>.\APP\HX711.cpp</PathWithFileName>
       <FilenameWithoutPath>HX711.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

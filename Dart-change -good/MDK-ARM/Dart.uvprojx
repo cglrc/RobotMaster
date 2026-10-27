@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F427xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Middlewares/ST/ARM/DSP/Inc;./APP_Task;./BSP_Can_Communication;./BSP_Uart_Communication;./Middle_Plugin;./Middle_SpecificCode;..\user</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Middlewares/ST/ARM/DSP/Inc;.\APP;./BSP_Can_Communication;./BSP_Uart_Communication;./Middle_Plugin;./Middle_SpecificCode;..\user</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -752,102 +752,102 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>APP/Task</GroupName>
+          <GroupName>APP</GroupName>
           <Files>
             <File>
               <FileName>Dart.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\APP_Task\Dart.cpp</FilePath>
+              <FilePath>.\APP\Dart.cpp</FilePath>
             </File>
             <File>
               <FileName>Dart.hpp</FileName>
               <FileType>5</FileType>
-              <FilePath>.\APP_Task\Dart.hpp</FilePath>
+              <FilePath>.\APP\Dart.hpp</FilePath>
             </File>
             <File>
               <FileName>MotorControl.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\APP_Task\MotorControl.cpp</FilePath>
+              <FilePath>.\APP\MotorControl.cpp</FilePath>
             </File>
             <File>
               <FileName>MotorControl.hpp</FileName>
               <FileType>5</FileType>
-              <FilePath>.\APP_Task\MotorControl.hpp</FilePath>
+              <FilePath>.\APP\MotorControl.hpp</FilePath>
             </File>
             <File>
               <FileName>UartSend.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\APP_Task\UartSend.cpp</FilePath>
+              <FilePath>.\APP\UartSend.cpp</FilePath>
             </File>
             <File>
               <FileName>UartSend.hpp</FileName>
               <FileType>5</FileType>
-              <FilePath>.\APP_Task\UartSend.hpp</FilePath>
+              <FilePath>.\APP\UartSend.hpp</FilePath>
             </File>
             <File>
               <FileName>SystemMonitor.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\APP_Task\SystemMonitor.cpp</FilePath>
+              <FilePath>.\APP\SystemMonitor.cpp</FilePath>
             </File>
             <File>
               <FileName>SystemMonitor.hpp</FileName>
               <FileType>5</FileType>
-              <FilePath>.\APP_Task\SystemMonitor.hpp</FilePath>
+              <FilePath>.\APP\SystemMonitor.hpp</FilePath>
             </File>
             <File>
               <FileName>Buzzer.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\APP_Task\Buzzer.cpp</FilePath>
+              <FilePath>.\APP\Buzzer.cpp</FilePath>
             </File>
             <File>
               <FileName>Buzzer.hpp</FileName>
               <FileType>5</FileType>
-              <FilePath>.\APP_Task\Buzzer.hpp</FilePath>
+              <FilePath>.\APP\Buzzer.hpp</FilePath>
             </File>
             <File>
               <FileName>MotorOfflineDetector.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\APP_Task\MotorOfflineDetector.cpp</FilePath>
+              <FilePath>.\APP\MotorOfflineDetector.cpp</FilePath>
             </File>
             <File>
               <FileName>MotorOfflineDetector.hpp</FileName>
               <FileType>5</FileType>
-              <FilePath>.\APP_Task\MotorOfflineDetector.hpp</FilePath>
+              <FilePath>.\APP\MotorOfflineDetector.hpp</FilePath>
             </File>
             <File>
               <FileName>ServoControl.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\APP_Task\ServoControl.cpp</FilePath>
+              <FilePath>.\APP\ServoControl.cpp</FilePath>
             </File>
             <File>
               <FileName>ServoControl.hpp</FileName>
               <FileType>5</FileType>
-              <FilePath>.\APP_Task\ServoControl.hpp</FilePath>
+              <FilePath>.\APP\ServoControl.hpp</FilePath>
             </File>
             <File>
               <FileName>VisionCommunication.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\APP_Task\VisionCommunication.cpp</FilePath>
+              <FilePath>.\APP\VisionCommunication.cpp</FilePath>
             </File>
             <File>
               <FileName>VisionCommunication.hpp</FileName>
               <FileType>9</FileType>
-              <FilePath>.\APP_Task\VisionCommunication.hpp</FilePath>
+              <FilePath>.\APP\VisionCommunication.hpp</FilePath>
             </File>
             <File>
               <FileName>auto.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\APP_Task\auto.cpp</FilePath>
+              <FilePath>.\APP\auto.cpp</FilePath>
             </File>
             <File>
               <FileName>auto.hpp</FileName>
               <FileType>9</FileType>
-              <FilePath>.\APP_Task\auto.hpp</FilePath>
+              <FilePath>.\APP\auto.hpp</FilePath>
             </File>
             <File>
               <FileName>HX711.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\APP_Task\HX711.cpp</FilePath>
+              <FilePath>.\APP\HX711.cpp</FilePath>
             </File>
           </Files>
         </Group>

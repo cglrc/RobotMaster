@@ -15,7 +15,7 @@ void Uart_Task_Entry(void *argument)
     /* Infinite loop */
     for (;;) {
         // GimbalToChassisUartSend();
-        //VofaUartSend();
+        VofaUartSend();
 
         vTaskDelayUntil(&Lasttick, pdMS_TO_TICKS(5));
     }
@@ -27,6 +27,9 @@ void Vision_Task_Entry(void *argument)
 {
     TickType_t Lasttick = xTaskGetTickCount();
     VisionUartSend.Head = 0x39;
+
+    
+    VisionUartSend.AimingFinishCount = 255;
 
     for (;;) {
         Arr_VisionSend[0] = VisionUartSend.Head;
@@ -69,8 +72,8 @@ void VofaUartSend()
 {
     float Ch1 = Motors[RIGHT_LOAD].Feedback.RPM;
     float Ch2 = Motors[LEFT_LOAD].Feedback.RPM;
-    float Ch3 = Motors[LEFT_LIFT].Feedback.RPM;
-    float Ch4 = Motors[RIGHT_LIFT].Feedback.RPM;
+    float Ch3 = (float)Motors[LEFT_LOAD].Output;
+    float Ch4 = (float)Motors[RIGHT_LOAD].Output;
 
     uint32_t special_value = 0x7f800000;
 

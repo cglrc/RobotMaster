@@ -1,4 +1,3 @@
-//#include "struct_typedef.h"
 #include "can.h"
 #include "dma.h"
 #include "usart.h"
@@ -33,5 +32,5 @@ typedef struct
 extern uint8_t receivedata[18];
 extern uint32_t rc_last_recv_time;
 extern uint8_t rc_disconnect_flag;
-extern RC_Ctl_t data; // ����Ϊ�ⲿ�������������ļ�ʹ��
+extern RC_Ctl_t data;
 void remoteDataProcess(uint8_t* pData);

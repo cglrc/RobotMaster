@@ -96,50 +96,7 @@ void SyncYawAngle()
     }
 }
 
-// void Handle_Buzzer(void)
-// {
-//     // 检查是否有电机掉线报警，如果有则不播放音乐
-//     // if (all_motors_connected == false) {
-//     //     playState = 0;
-//     //     return; // 有电机掉线报警，不播放音乐
-//     // }
 
-//     Song_Length = sizeof(You) / sizeof(Bate);
-//     if (playState){
-//         const Bate bate = You[playIndex];
-//         if (bate.frequency == P0) {
-//           // 休止符
-//           __HAL_TIM_SET_COMPARE(&htim12, TIM_CHANNEL_1, 0);
-//         } else {
-//           // 将频率转换为计数值, 设置到自动重装载寄存器
-//           uint32_t arr = timFrequency_ / bate.frequency;
-//           __HAL_TIM_SET_AUTORELOAD(&htim12,arr);
-//           // 设置占空比为20%
-//           __HAL_TIM_SET_COMPARE(&htim12, TIM_CHANNEL_1, arr / 5); // 20%占空比
-//           // 从0开始计数 重置PWM波形
-//           __HAL_TIM_SetCounter(&htim12, 0);
-//         }
-//         // 延时该音符的持续时间 (5ms的空白以区分连续两个相同的音符)
-//         // vTaskDelay(pdMS_TO_TICKS((uint32_t)(bate.period * noteDuration) - 5));
-//         // __HAL_TIM_SET_COMPARE(&htim12, TIM_CHANNEL_1, 0);
-//         // vTaskDelay(pdMS_TO_TICKS(5));
-//         HAL_Delay((uint32_t) (bate.period * noteDuration) - 5);
-//         __HAL_TIM_SET_COMPARE(&htim12, TIM_CHANNEL_1, 0);
-//         HAL_Delay(5);
-
-//         // 下一个音符
-//         playIndex++;
-//         // 播放结束
-//         if (playIndex >= Song_Length){
-//           playState = 0;
-//           playIndex = 0;
-//         }
-//     }
-// }
-
-/**
- * 计算定时器计数频率
- */
 uint32_t TIM_GetCounterFreq(TIM_HandleTypeDef *htim)
 {
     uint32_t timer_clock;

@@ -192,7 +192,7 @@ void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName)
 {
     (void)xTask;
     (void)pcTaskName;
-    __NOP(); // 在这里打断点，查看 pcTaskName 确认哪个任务溢出
+    __NOP();
     for (;;) {}
 }
 /* USER CODE END Application */
